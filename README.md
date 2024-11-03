@@ -180,17 +180,21 @@ Localtunnel for URL tunneling in Google Colab
 
 # Code Structure
 1.app.py: Main application file containing the Streamlit interface and scraping logic.
+
 2.scraped_data.csv: CSV file generated after scraping, available for download.
 
 
 # API Reference
 This application operates through a Streamlit interface, so it does not use REST API endpoints. 
+
 Inputs are handled through Streamlit form fields, and results are displayed directly in the Colab-hosted Streamlit app.
 
 
 # Troubleshooting
 Errors with Chrome: Ensure Google Chrome is compatible with the version of ChromeDriver installed by chromedriver-autoinstaller.
+
 Timeout Errors: Increase time.sleep() in the script to allow longer load times for each page.
+
 Colab-specific Issues: Re-run all cells if the Colab session disconnects due to inactivity.
 
 
