@@ -40,11 +40,11 @@ CSV Export: Download scraped data as a CSV file for easy data management.
 ##  Clone the Repository
 First, clone the repository to access the application files:
 
-    ```bash
+```bash
     Copy code
     git clone https://github.com/your-username/your-repository.git
     cd your-repository
-    ```
+```
 
 
 # Set Up the Environment
@@ -53,48 +53,49 @@ Since this scraper runs in Google Colab, the following steps are tailored to wor
 ##  Create a Virtual Environment
 To maintain dependency isolation, create a virtual environment:
 
-    ```bash
+```bash
     Copy code
     python -m venv venv
-    ```
+```
 
 ## Activate the Virtual Environment
 Depending on your OS, activate the virtual environment:
 
-    ```bash
+```bash
     Copy code
     Windows
     venv\Scripts\activate
-    ```
+```
 
-    ```macOS/Linux
+```macOS/Linux
     source venv/bin/activate
-    ```
+```
 
 ##  Install Required Packages
 Install all necessary packages, including Selenium, Streamlit, chromedriver-autoinstaller, and localtunnel.
 
-    ```bash
+```bash
     Copy code
     !pip install -r requirements.txt
-    ```
+```
     
 Note: Within Google Colab, these packages will be installed globally due to Colab’s setup.
 
 ##  Install ChromeDriver
 Install ChromeDriver using chromedriver-autoinstaller, which handles version compatibility automatically:
 
-    ```python
-    Copy code
-    import chromedriver_autoinstaller
-    chromedriver_autoinstaller.install()
-    ```
+```bash
+python
+Copy code
+import chromedriver_autoinstaller
+chromedriver_autoinstaller.install()
+```
 
 
 # Configuration
 
 ##  Requirements
-```
+```bash
 Python 3.x
 Google Chrome (ensure compatibility with chromedriver-autoinstaller)
 Selenium
@@ -108,7 +109,7 @@ Localtunnel for URL tunneling in Google Colab
 ##  Start the Application
 1.Set up the scraper code: Copy and save the following code into a file named app.py in the Colab environment.
 
-  ```
+  ```bash
     import streamlit as st
     import pandas as pd
     import time
@@ -158,18 +159,19 @@ Localtunnel for URL tunneling in Google Colab
 
 2. Run Streamlit with Localtunnel: Start the Streamlit app and expose it using localtunnel.
    
-       ```import subprocess
-       from IPython.display import display, HTML
-        
-       streamlit_process = subprocess.Popen(['streamlit', 'run', 'app.py', '--server.port', '8501'])
-       localtunnel_process = subprocess.Popen(['lt', '--port', '8501'], stdout=subprocess.PIPE)
-        
-       for line in iter(localtunnel_process.stdout.readline, b''):
-           if b'https://' in line:
-               external_url = line.decode('utf-8').strip()
-               display(HTML(f'<a href="{external_url}" target="_blank">Open Streamlit app</a>'))
-               break
-   ```
+```bash
+    import subprocess
+    from IPython.display import display, HTML
+    
+    streamlit_process = subprocess.Popen(['streamlit', 'run', 'app.py', '--server.port', '8501'])
+    localtunnel_process = subprocess.Popen(['lt', '--port', '8501'], stdout=subprocess.PIPE)
+    
+    for line in iter(localtunnel_process.stdout.readline, b''):
+        if b'https://' in line:
+            external_url = line.decode('utf-8').strip()
+            display(HTML(f'<a href="{external_url}" target="_blank">Open Streamlit app</a>'))
+            break
+```
      
 4. Open the Streamlit Interface:
 
@@ -202,7 +204,7 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 
 # Acknowledgements
 
-Selenium Documentation
-Streamlit Documentation
-Localtunnel for URL tunneling
-Yellow Pages
+- Selenium Documentation
+- Streamlit Documentation
+- Localtunnel for URL tunneling
+- Yellow Pages
