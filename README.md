@@ -40,10 +40,11 @@ CSV Export: Download scraped data as a CSV file for easy data management.
 ##  Clone the Repository
 First, clone the repository to access the application files:
 
-    bash
+    ```bash
     Copy code
     git clone https://github.com/your-username/your-repository.git
     cd your-repository
+    ```
 
 
 # Set Up the Environment
@@ -52,53 +53,62 @@ Since this scraper runs in Google Colab, the following steps are tailored to wor
 ##  Create a Virtual Environment
 To maintain dependency isolation, create a virtual environment:
 
-    bash
+    ```bash
     Copy code
     python -m venv venv
+    ```
 
 ## Activate the Virtual Environment
 Depending on your OS, activate the virtual environment:
 
-    bash
+    ```bash
     Copy code
     Windows
     venv\Scripts\activate
+    ```
 
-    macOS/Linux
+    ```macOS/Linux
     source venv/bin/activate
+    ```
 
 ##  Install Required Packages
 Install all necessary packages, including Selenium, Streamlit, chromedriver-autoinstaller, and localtunnel.
 
-    bash
+    ```bash
     Copy code
     !pip install -r requirements.txt
+    ```
+    
 Note: Within Google Colab, these packages will be installed globally due to Colab’s setup.
 
 ##  Install ChromeDriver
 Install ChromeDriver using chromedriver-autoinstaller, which handles version compatibility automatically:
 
-    python
+    ```python
     Copy code
     import chromedriver_autoinstaller
     chromedriver_autoinstaller.install()
+    ```
 
 
 # Configuration
 
 ##  Requirements
--Python 3.x
--Google Chrome (ensure compatibility with chromedriver-autoinstaller)
--Selenium
--Streamlit
--Localtunnel for URL tunneling in Google Colab
+```
+Python 3.x
+Google Chrome (ensure compatibility with chromedriver-autoinstaller)
+Selenium
+Streamlit
+Localtunnel for URL tunneling in Google Colab
+```
 
 
 # Usage
 
 ##  Start the Application
 1.Set up the scraper code: Copy and save the following code into a file named app.py in the Colab environment.
-  
+
+  ```
     import streamlit as st
     import pandas as pd
     import time
@@ -141,13 +151,14 @@ Install ChromeDriver using chromedriver-autoinstaller, which handles version com
         df = pd.DataFrame(data)
         st.write(df)
         st.download_button("Download CSV", data=open("scraped_data.csv", "rb").read(), file_name="scraped_data.csv")
+```
 
     
 
 
 2. Run Streamlit with Localtunnel: Start the Streamlit app and expose it using localtunnel.
    
-       import subprocess
+       ```import subprocess
        from IPython.display import display, HTML
         
        streamlit_process = subprocess.Popen(['streamlit', 'run', 'app.py', '--server.port', '8501'])
@@ -158,15 +169,16 @@ Install ChromeDriver using chromedriver-autoinstaller, which handles version com
                external_url = line.decode('utf-8').strip()
                display(HTML(f'<a href="{external_url}" target="_blank">Open Streamlit app</a>'))
                break
+   ```
      
-3. Open the Streamlit Interface:
+4. Open the Streamlit Interface:
 
    Click on the generated link to access the app and input your desired search parameters.
 
 
 # Code Structure
--app.py: Main application file containing the Streamlit interface and scraping logic.
--scraped_data.csv: CSV file generated after scraping, available for download.
+1.app.py: Main application file containing the Streamlit interface and scraping logic.
+2.scraped_data.csv: CSV file generated after scraping, available for download.
 
 
 # API Reference
@@ -189,7 +201,8 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 
 
 # Acknowledgements
-[.]Selenium Documentation
-[.]Streamlit Documentation
-[.]Localtunnel for URL tunneling
-[.]Yellow Pages
+
+Selenium Documentation
+Streamlit Documentation
+Localtunnel for URL tunneling
+Yellow Pages
