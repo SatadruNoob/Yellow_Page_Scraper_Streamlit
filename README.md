@@ -1,26 +1,26 @@
-  # Yellow_Page_Scraper_Streamlit
+# Yellow_Page_Scraper_Streamlit
 
 # Table of Contents
 
 1.[Overview](#overview)  
-[Features](#features)  
-[Installation](#installation)  
+2.[Features](#features)  
+3.[Installation](#installation)  
   - [Clone the Repository](#clone-the-repository)  
   - [Set Up the Environment](#set-up-the-environment)  
     - [Create a Virtual Environment](#create-a-virtual-environment)  
     - [Activate the Virtual Environment](#activate-the-virtual-environment)  
     - [Install Required Packages](#install-required-packages)  
     - [Install ChromeDriver](#install-chromedriver)  
-[Configuration](#configuration)  
+4.[Configuration](#configuration)  
     - [Requirements](#requirements)  
-[Usage](#usage)  
+5.[Usage](#usage)  
   - [Start the Application](#start-the-application)  
-[Code Structure](#code-structure)  
-[API Reference](#api-reference)  
-[Troubleshooting](#troubleshooting)  
-[Contributing](#contributing)  
-[License](#license)  
-[Acknowledgements](#acknowledgements)
+6.[Code Structure](#code-structure)  
+7.[API Reference](#api-reference)  
+8.[Troubleshooting](#troubleshooting)  
+9.[Contributing](#contributing)  
+10.[License](#license)  
+11.[Acknowledgements](#acknowledgements)
 
 
 
@@ -30,13 +30,13 @@ This application allows users to gather business information, such as business n
 It utilizes Selenium for web scraping, Streamlit for the web interface, and localtunnel to enable public access to the Streamlit application within the Colab environment.
 
 
-# Features
+# 2. Features
 Search by Keywords and Location: Input search terms and geographic location to filter results.
 Scrapes Business Details: Extracts business name, phone number, address, and website from Yellow Pages.
 CSV Export: Download scraped data as a CSV file for easy data management.
 
 
-# Installation
+# 3. Installation
 ##  Clone the Repository
 First, clone the repository to access the application files:
 
@@ -47,7 +47,7 @@ First, clone the repository to access the application files:
 ```
 
 
-# Set Up the Environment
+# 4. Set Up the Environment
 Since this scraper runs in Google Colab, the following steps are tailored to work within Colab’s environment.
 
 ##  Create a Virtual Environment
@@ -92,7 +92,7 @@ chromedriver_autoinstaller.install()
 ```
 
 
-# Configuration
+# 5. Configuration
 
 ##  Requirements
 ```bash
@@ -104,7 +104,7 @@ Localtunnel for URL tunneling in Google Colab
 ```
 
 
-# Usage
+# 6. Usage
 
 ##  Start the Application
 1.Set up the scraper code: Copy and save the following code into a file named app.py in the Colab environment.
@@ -178,19 +178,19 @@ Localtunnel for URL tunneling in Google Colab
    Click on the generated link to access the app and input your desired search parameters.
 
 
-# Code Structure
+# 7. Code Structure
 1.app.py: Main application file containing the Streamlit interface and scraping logic.
 
 2.scraped_data.csv: CSV file generated after scraping, available for download.
 
 
-# API Reference
+# 8. API Reference
 This application operates through a Streamlit interface, so it does not use REST API endpoints. 
 
 Inputs are handled through Streamlit form fields, and results are displayed directly in the Colab-hosted Streamlit app.
 
 
-# Troubleshooting
+# 9. Troubleshooting
 Errors with Chrome: Ensure Google Chrome is compatible with the version of ChromeDriver installed by chromedriver-autoinstaller.
 
 Timeout Errors: Increase time.sleep() in the script to allow longer load times for each page.
@@ -198,15 +198,15 @@ Timeout Errors: Increase time.sleep() in the script to allow longer load times f
 Colab-specific Issues: Re-run all cells if the Colab session disconnects due to inactivity.
 
 
-# Contributing
+# 10. Contributing
 Contributions are welcome! Please submit issues or pull requests for bug fixes or improvements.
 
 
-# License
+# 11. License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 
-# Acknowledgements
+# 12. Acknowledgements
 
 - Selenium Documentation
 - Streamlit Documentation
