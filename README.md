@@ -12,8 +12,7 @@
     - [Install Required Packages](#install-required-packages)  
     - [Install ChromeDriver](#install-chromedriver)  
 [Configuration](#configuration)  
-  - [Environment Variables](#environment-variables)  
-  - [Requirements](#requirements)  
+    - [Requirements](#requirements)  
 [Usage](#usage)  
   - [Start the Application](#start-the-application)  
 [Code Structure](#code-structure)  
@@ -26,7 +25,10 @@
 
 
 # Overview
-The Yellow Pages Business Scraper is a Python application built specifically for use in Google Colab. This application allows users to gather business information, such as business name, phone number, address, and website, directly from Yellow Pages. It utilizes Selenium for web scraping, Streamlit for the web interface, and localtunnel to enable public access to the Streamlit application within the Colab environment.
+The Yellow Pages Business Scraper is a Python application built specifically for use in Google Colab. 
+This application allows users to gather business information, such as business name, phone number, address, and website, directly from Yellow Pages. 
+It utilizes Selenium for web scraping, Streamlit for the web interface, and localtunnel to enable public access to the Streamlit application within the Colab environment.
+
 
 # Features
 Search by Keywords and Location: Input search terms and geographic location to filter results.
@@ -42,6 +44,8 @@ bash
 Copy code
 git clone https://github.com/your-username/your-repository.git
 cd your-repository
+
+
 # Set Up the Environment
 Since this scraper runs in Google Colab, the following steps are tailored to work within Colab’s environment.
 
@@ -51,16 +55,18 @@ To maintain dependency isolation, create a virtual environment:
 bash
 Copy code
 python -m venv venv
+
 ## Activate the Virtual Environment
 Depending on your OS, activate the virtual environment:
 
 bash
 Copy code
-# Windows
+Windows
 venv\Scripts\activate
 
-# macOS/Linux
+macOS/Linux
 source venv/bin/activate
+
 ##  Install Required Packages
 Install all necessary packages, including Selenium, Streamlit, chromedriver-autoinstaller, and localtunnel.
 
@@ -76,25 +82,20 @@ python
 Copy code
 import chromedriver_autoinstaller
 chromedriver_autoinstaller.install()
+
+
 # Configuration
-##  Environment Variables
-Create a .env file in the project root to store environment variables (such as Twilio credentials, if applicable). If no sensitive information is needed, you may skip this step.
 
-Example .env configuration:
-
-dotenv
-Copy code
-ACCOUNT_SID=your_twilio_account_sid
-AUTH_TOKEN=your_twilio_auth_token
-FROM_NUMBER=your_twilio_phone_number
-TO_NUMBER=recipient_phone_number
 ##  Requirements
 Python 3.x
 Google Chrome (ensure compatibility with chromedriver-autoinstaller)
 Selenium
 Streamlit
 Localtunnel for URL tunneling in Google Colab
+
+
 # Usage
+
 ##  Start the Application
 Set up the scraper code: Copy and save the following code into a file named app.py in the Colab environment.
 
@@ -107,6 +108,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import chromedriver_autoinstaller
+
 
 # Streamlit interface
 st.title("Yellow Pages Business Scraper (Colab)")
@@ -159,21 +161,29 @@ for line in iter(localtunnel_process.stdout.readline, b''):
         break
 Open the Streamlit Interface: Click on the generated link to access the app and input your desired search parameters.
 
+
 # Code Structure
 app.py: Main application file containing the Streamlit interface and scraping logic.
 scraped_data.csv: CSV file generated after scraping, available for download.
+
+
 # API Reference
 This application operates through a Streamlit interface, so it does not use REST API endpoints. Inputs are handled through Streamlit form fields, and results are displayed directly in the Colab-hosted Streamlit app.
+
 
 # Troubleshooting
 Errors with Chrome: Ensure Google Chrome is compatible with the version of ChromeDriver installed by chromedriver-autoinstaller.
 Timeout Errors: Increase time.sleep() in the script to allow longer load times for each page.
 Colab-specific Issues: Re-run all cells if the Colab session disconnects due to inactivity.
+
+
 # Contributing
 Contributions are welcome! Please submit issues or pull requests for bug fixes or improvements.
 
+
 # License
 This project is licensed under the MIT License. See the LICENSE file for more information.
+
 
 # Acknowledgements
 Selenium Documentation
