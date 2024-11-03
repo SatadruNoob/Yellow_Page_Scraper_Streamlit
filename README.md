@@ -92,9 +92,9 @@ chromedriver_autoinstaller.install()
 ```
 
 
-# 5. Configuration
+### Configuration
 
-##  Requirements
+####  Requirements
 ```bash
 Python 3.x
 Google Chrome (ensure compatibility with chromedriver-autoinstaller)
@@ -104,9 +104,9 @@ Localtunnel for URL tunneling in Google Colab
 ```
 
 
-# 6. Usage
+### Usage
 
-##  Start the Application
+####  Start the Application
 1.Set up the scraper code: Copy and save the following code into a file named app.py in the Colab environment.
 
   ```bash
@@ -178,19 +178,19 @@ Localtunnel for URL tunneling in Google Colab
    Click on the generated link to access the app and input your desired search parameters.
 
 
-# 7. Code Structure
+# 5. Code Structure
 1.app.py: Main application file containing the Streamlit interface and scraping logic.
 
 2.scraped_data.csv: CSV file generated after scraping, available for download.
 
 
-# 8. API Reference
+# 6. API Reference
 This application operates through a Streamlit interface, so it does not use REST API endpoints. 
 
 Inputs are handled through Streamlit form fields, and results are displayed directly in the Colab-hosted Streamlit app.
 
 
-# 9. Troubleshooting
+# 7. Troubleshooting
 Errors with Chrome: Ensure Google Chrome is compatible with the version of ChromeDriver installed by chromedriver-autoinstaller.
 
 Timeout Errors: Increase time.sleep() in the script to allow longer load times for each page.
@@ -198,15 +198,15 @@ Timeout Errors: Increase time.sleep() in the script to allow longer load times f
 Colab-specific Issues: Re-run all cells if the Colab session disconnects due to inactivity.
 
 
-# 10. Contributing
+# 8. Contributing
 Contributions are welcome! Please submit issues or pull requests for bug fixes or improvements.
 
 
-# 11. License
+# 9. License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 
-# 12. Acknowledgements
+# 10. Acknowledgements
 
 - Selenium Documentation
 - Streamlit Documentation
