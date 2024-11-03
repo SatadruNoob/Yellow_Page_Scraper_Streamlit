@@ -2,7 +2,7 @@
 
 # Table of Contents
 
-[Overview](#overview)  
+1.[Overview](#overview)  
 [Features](#features)  
 [Installation](#installation)  
   - [Clone the Repository](#clone-the-repository)  
@@ -24,7 +24,7 @@
 
 
 
-# Overview
+# 1. Overview
 The Yellow Pages Business Scraper is a Python application built specifically for use in Google Colab. 
 This application allows users to gather business information, such as business name, phone number, address, and website, directly from Yellow Pages. 
 It utilizes Selenium for web scraping, Streamlit for the web interface, and localtunnel to enable public access to the Streamlit application within the Colab environment.
