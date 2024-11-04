@@ -1,5 +1,5 @@
-                                                                      
-                                                                      Yellow_Page_Scraper_Streamlit_Selenium_Beautifulsoup
+                                                                 
+  **Yellow_Page_Scraper_Streamlit_Selenium_Beautifulsoup**
 
 # Table of Contents
 
