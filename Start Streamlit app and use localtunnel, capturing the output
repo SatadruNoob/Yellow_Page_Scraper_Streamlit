@@ -1,0 +1,29 @@
+
+# Install necessary packages and set up the environment
+!pip install streamlit -q
+!wget -q -O - ipv4.icanhazip.com
+
+# Install localtunnel globally to avoid confirmation prompts
+!npm install -g localtunnel
+
+import subprocess
+import re
+from IPython.display import display, HTML
+
+# Start Streamlit app and use localtunnel, capturing the output
+streamlit_process = subprocess.Popen(['streamlit', 'run', 'app.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+localtunnel_process = subprocess.Popen(['lt', '--port', '8501'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+# Function to extract the URL from localtunnel output
+def get_localtunnel_url():
+    while True:
+        output = localtunnel_process.stdout.readline().decode('utf-8')
+        if output.startswith('your url is:'):
+            url = output.split('your url is: ')[-1].strip()
+            return url
+
+# Wait for the localtunnel URL to be available
+external_url = get_localtunnel_url()
+
+# Display the URL as a clickable link in the notebook
+display(HTML(f'<a href="{external_url}" target="_blank">Click here to open your Streamlit app!</a>'))
