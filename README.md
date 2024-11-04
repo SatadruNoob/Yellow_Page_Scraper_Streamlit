@@ -50,51 +50,12 @@ First, clone the repository to access the application files:
 # 4. Set Up the Environment
 Since this scraper runs in Google Colab, the following steps are tailored to work within Colab’s environment.
 
-##  Create a Virtual Environment
-To maintain dependency isolation, create a virtual environment:
 
-```bash
-    Copy code
-    python -m venv venv
-```
-
-## Activate the Virtual Environment
-Depending on your OS, activate the virtual environment:
-
-```bash
-    Copy code
-    Windows
-    venv\Scripts\activate
-```
-
-```macOS/Linux
-    source venv/bin/activate
-```
-
-##  Install Required Packages
-Install all necessary packages, including Selenium, Streamlit, chromedriver-autoinstaller, and localtunnel.
-
-```bash
-    Copy code
-    !pip install -r requirements.txt
-```
-    
-Note: Within Google Colab, these packages will be installed globally due to Colab’s setup.
-
-##  Install ChromeDriver
-Install ChromeDriver using chromedriver-autoinstaller, which handles version compatibility automatically:
-
-```bash
-python
-Copy code
-import chromedriver_autoinstaller
-chromedriver_autoinstaller.install()
-```
 
 
 ### Configuration
 
-####  Requirements
+####  Libraries Installed in Colab:
 ```bash
 streamlit==1.25.0
 selenium==4.12.0
