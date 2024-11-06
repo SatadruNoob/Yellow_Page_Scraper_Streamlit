@@ -25,21 +25,13 @@
 
 
 
-
+https://github.com/user-attachments/assets/6cbd1ef6-c399-4ebe-bdcc-fa96af74fe5b
 
 
 ![Yellow page scraper fiverr gig front](https://github.com/user-attachments/assets/69978b01-689c-48af-b2b9-37b22af1f50e)
 
 
 ![one click yellow gig photo](https://github.com/user-attachments/assets/aa7e785a-3d08-49b6-b5b3-39e39b6ac77d)
-
-
-
-https://github.com/user-attachments/assets/2d0f3e61-e099-442b-89e9-a3c7554c8e22
-
-
-
-
 
 
 
